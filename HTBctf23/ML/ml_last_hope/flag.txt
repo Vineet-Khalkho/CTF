@@ -1,3 +1,8 @@
+CHALLENGE NAME:
+
+Last Hope
+The quantum data came back and analyzed. DISASTER! Our best scientists all agree: Unfortunately our species and our whole culture are about to be eliminated. Due to abnormal behavior of the black hole's singularity our planet is about to get swallowed. Project "ONESHOT" is our last hope...
+
 Steps to obtain a CTF flag:
 
 -> Import the  QuantumCircuit and transpile modules from the Qiskit package, AerSimulator module from the qiskit.providers.aer package and the long_to_bytes, bytes_to_long methods from the Crypto.Util.number package.
